@@ -10,7 +10,7 @@
 
 @interface DHKPlaylistController()
 
-@property (nonatomic, strong, readonly) NSMutableArray* internalPlaylists;
+@property (nonatomic, strong, readwrite) NSMutableArray* internalPlaylists;
 
 @end
 
