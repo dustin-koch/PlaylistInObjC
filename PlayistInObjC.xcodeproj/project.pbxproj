@@ -15,6 +15,8 @@
 		CA88519922930BCD00B34C28 /* DHKSong.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88519822930BCD00B34C28 /* DHKSong.m */; };
 		CA88519D22930C3800B34C28 /* DHKPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88519C22930C3800B34C28 /* DHKPlaylist.m */; };
 		CA8851A02293171A00B34C28 /* DHKPlaylistController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88519F2293171A00B34C28 /* DHKPlaylistController.m */; };
+		CA8851A42293227800B34C28 /* DHKPlaylistListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8851A32293227800B34C28 /* DHKPlaylistListTableViewController.m */; };
+		CA8851A822933AA000B34C28 /* DHKDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8851A722933AA000B34C28 /* DHKDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		CA88519C22930C3800B34C28 /* DHKPlaylist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHKPlaylist.m; sourceTree = "<group>"; };
 		CA88519E2293171A00B34C28 /* DHKPlaylistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHKPlaylistController.h; sourceTree = "<group>"; };
 		CA88519F2293171A00B34C28 /* DHKPlaylistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHKPlaylistController.m; sourceTree = "<group>"; };
+		CA8851A22293227800B34C28 /* DHKPlaylistListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHKPlaylistListTableViewController.h; sourceTree = "<group>"; };
+		CA8851A32293227800B34C28 /* DHKPlaylistListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHKPlaylistListTableViewController.m; sourceTree = "<group>"; };
+		CA8851A622933AA000B34C28 /* DHKDetailTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHKDetailTableViewController.h; sourceTree = "<group>"; };
+		CA8851A722933AA000B34C28 /* DHKDetailTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHKDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				CA88518622930A6800B34C28 /* Main.storyboard */,
+				CA8851A52293227E00B34C28 /* View Controllers */,
 				CA88519622930A9E00B34C28 /* Resources */,
 				CA88519A22930BD400B34C28 /* Models */,
-				CA8851A12293171F00B34C28 /* Controllers */,
+				CA8851A12293171F00B34C28 /* Model Controllers */,
 			);
 			path = PlayistInObjC;
 			sourceTree = "<group>";
@@ -97,13 +104,24 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		CA8851A12293171F00B34C28 /* Controllers */ = {
+		CA8851A12293171F00B34C28 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CA88519E2293171A00B34C28 /* DHKPlaylistController.h */,
 				CA88519F2293171A00B34C28 /* DHKPlaylistController.m */,
 			);
-			path = Controllers;
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		CA8851A52293227E00B34C28 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA8851A22293227800B34C28 /* DHKPlaylistListTableViewController.h */,
+				CA8851A32293227800B34C28 /* DHKPlaylistListTableViewController.m */,
+				CA8851A622933AA000B34C28 /* DHKDetailTableViewController.h */,
+				CA8851A722933AA000B34C28 /* DHKDetailTableViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +197,11 @@
 			files = (
 				CA88519922930BCD00B34C28 /* DHKSong.m in Sources */,
 				CA88519D22930C3800B34C28 /* DHKPlaylist.m in Sources */,
+				CA8851A822933AA000B34C28 /* DHKDetailTableViewController.m in Sources */,
 				CA8851A02293171A00B34C28 /* DHKPlaylistController.m in Sources */,
 				CA88519022930A6900B34C28 /* main.m in Sources */,
 				CA88518222930A6800B34C28 /* AppDelegate.m in Sources */,
+				CA8851A42293227800B34C28 /* DHKPlaylistListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

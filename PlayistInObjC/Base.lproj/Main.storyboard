@@ -12,7 +12,7 @@
         <!--Playlists-->
         <scene sceneID="rBX-og-KMY">
             <objects>
-                <tableViewController id="ISm-dx-sVD" sceneMemberID="viewController">
+                <tableViewController id="ISm-dx-sVD" customClass="DHKPlaylistListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K9q-MH-qVv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="FnG-Te-iaD" kind="show" identifier="toPlaylistDetailView" id="Yt4-nf-JV2"/>
                                 </connections>
@@ -72,17 +71,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Playlists" id="iyW-7P-qlX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6EW-Pc-fNa"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6EW-Pc-fNa">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="ISm-dx-sVD" id="TNu-hK-L9x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="L63-nL-YPT" id="4jz-nf-gPO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwV-QR-rxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1065.217391304348" y="125.89285714285714"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detail Table View Controller-->
         <scene sceneID="cxc-p9-NtM">
             <objects>
-                <tableViewController id="FnG-Te-iaD" sceneMemberID="viewController">
+                <tableViewController id="FnG-Te-iaD" customClass="DHKDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5YB-ol-aar">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +147,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -149,6 +154,17 @@
                             <outlet property="delegate" destination="FnG-Te-iaD" id="1gI-w4-HKd"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="dVO-V6-bCw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="lAp-ke-aD2">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="FnG-Te-iaD" id="GQh-tX-w7n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="TtB-xV-UT1" id="AWk-Gh-otT"/>
+                        <outlet property="titleTextField" destination="QSh-LM-Qwh" id="YtY-21-SuH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jY-OJ-qWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

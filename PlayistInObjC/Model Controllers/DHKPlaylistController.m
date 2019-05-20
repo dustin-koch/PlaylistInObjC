@@ -35,6 +35,13 @@
     return self;
 }
 
+- (NSArray *)playlist
+{
+    return self.internalPlaylists;
+}
+
+//MARK: - CRUD functions
+
 - (void)createPlaylistWIthName:(NSString *)name
 {
     DHKPlaylist *newPlaylist = [[DHKPlaylist alloc] initWithName:name songs:[NSMutableArray new]];
