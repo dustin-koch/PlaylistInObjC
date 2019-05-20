@@ -12,6 +12,8 @@
 		CA88518A22930A6900B34C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA88518922930A6900B34C28 /* Assets.xcassets */; };
 		CA88518D22930A6900B34C28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA88518B22930A6900B34C28 /* LaunchScreen.storyboard */; };
 		CA88519022930A6900B34C28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88518F22930A6900B34C28 /* main.m */; };
+		CA88519922930BCD00B34C28 /* DHKSong.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88519822930BCD00B34C28 /* DHKSong.m */; };
+		CA88519D22930C3800B34C28 /* DHKPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88519C22930C3800B34C28 /* DHKPlaylist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		CA88518C22930A6900B34C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA88518E22930A6900B34C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA88518F22930A6900B34C28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA88519722930BCD00B34C28 /* DHKSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHKSong.h; sourceTree = "<group>"; };
+		CA88519822930BCD00B34C28 /* DHKSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHKSong.m; sourceTree = "<group>"; };
+		CA88519B22930C3800B34C28 /* DHKPlaylist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHKPlaylist.h; sourceTree = "<group>"; };
+		CA88519C22930C3800B34C28 /* DHKPlaylist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHKPlaylist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 		CA88517422930A6800B34C28 = {
 			isa = PBXGroup;
 			children = (
+				CA88519A22930BD400B34C28 /* Models */,
 				CA88517F22930A6800B34C28 /* PlayistInObjC */,
 				CA88517E22930A6800B34C28 /* Products */,
 			);
@@ -74,6 +81,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CA88519A22930BD400B34C28 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA88519B22930C3800B34C28 /* DHKPlaylist.h */,
+				CA88519C22930C3800B34C28 /* DHKPlaylist.m */,
+				CA88519722930BCD00B34C28 /* DHKSong.h */,
+				CA88519822930BCD00B34C28 /* DHKSong.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +118,7 @@
 		CA88517522930A6800B34C28 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DHK;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Rabbit Hole Fashion";
 				TargetAttributes = {
@@ -144,6 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA88519922930BCD00B34C28 /* DHKSong.m in Sources */,
+				CA88519D22930C3800B34C28 /* DHKPlaylist.m in Sources */,
 				CA88519022930A6900B34C28 /* main.m in Sources */,
 				CA88518222930A6800B34C28 /* AppDelegate.m in Sources */,
 			);
@@ -288,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PlayistInObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PlayistInObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PlayistInObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PlayistInObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
