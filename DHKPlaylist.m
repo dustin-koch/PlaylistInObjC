@@ -25,4 +25,21 @@
     return self;
 }
 
+#pragma mark - Methods
+- (void) addSongsObject:(DHKSong *)object
+{
+    [self.internalSongs addObject:object];
+}
+- (void) removeSongsObject:(DHKSong *)object
+{
+    [self.internalSongs removeObject:object];
+}
+
+- (NSArray *)songs
+{
+    return self.internalSongs;
+}
+
+
+
 @end
